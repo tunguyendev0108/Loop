@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="guess()">Chơi</button>
+    <script>
+      function guess() {
+        let number = parseInt(prompt("Số bạn muốn đoán trong khoảng nào"));
+        let number_ran = Math.floor(Math.random() * number);
+        console.log(number_ran);
+        let number_check = parseInt(prompt("Nhập số bạn đoán"));
+        let count = 0;
+        while (number_check !== number_ran) {
+          count++;
+          if (count == 3) {
+            alert("Bạn đã hết số lần đoán. Xin cảm ơn!");
+            break;
+          } else if (number_check < number_ran) {
+            alert("bé thua");
+          } else {
+            alert("lớn hơn");
+          }
+          number_check = prompt("Nhập số bạn đoán");
+        }
+        if (count == 3) {
+          document.write("Bạn hết số lần đoán");
+        } else {
+          document.write("Xin chúc mừng bạn đã đoán đúng.");
+        }
+      }
+    </script>
+  </body>
+</html>
