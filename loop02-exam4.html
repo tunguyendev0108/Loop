@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hình chữ nhật</title>
+  </head>
+  <body>
+    <script>
+      let x = parseInt(prompt("Nhập chiều rộng"));
+      let y = parseInt(prompt("Nhập chiều dài"));
+      for (let i = 0; i <= x; i++) {
+        for (let j = 0; j <= y; j++) {
+          if (i === 0 || i === x || j === 0 || j === y) {
+            document.write("*");
+          } else {
+            document.write("&nbsp", "&nbsp");
+          }
+        }
+        document.write("<br>");
+      }
+    </script>
+  </body>
+</html>

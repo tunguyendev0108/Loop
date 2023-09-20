@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tính giai thừa</title>
+  </head>
+  <body>
+    <script>
+      let n = parseInt(prompt("Nhập 1 số nguyên dương"));
+      let n_giaithua = 1;
+      for (let i = 1; i <= n; i++) {
+        n_giaithua *= i;
+      }
+      document.write("Giai thừa của " + n + " là " + n_giaithua);
+    </script>
+  </body>
+</html>
